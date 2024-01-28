@@ -1,0 +1,86 @@
+.container {
+  margin: 40px auto;
+  padding: 10px 10px;
+  border: 2px solid lightcoral;
+  max-width: 600px;
+  background-color: white;
+  box-shadow: 0 15px 30px rgb(240, 215, 215);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-button {
+  padding: 20px 30px;
+  margin: 2px;
+  border: 2px solid palevioletred;
+  border-radius: 0px 30px 30px 0px;
+  background-color: pink;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.search-button:hover {
+  background-color: transparent;
+  color: palevioletred;
+}
+
+.enter-city {
+  padding: 20px 30px;
+  margin: 2px;
+  border: 2px solid plum;
+  border-radius: 30px 0px 0px 30px;
+  color: blueviolet;
+  width: 450px;
+}
+
+h1 {
+  color: rgb(175, 101, 245);
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+
+.current-weather {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+}
+
+.today-weather {
+  color: rgb(175, 101, 245);
+  font-size: 90px;
+  margin: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.material-symbols-outlined {
+  color: palevioletred;
+  font-size: 60px;
+}
+
+p {
+  color: palevioletred;
+}
+
+.humidity,
+.wind {
+  color: rgb(175, 101, 245);
+}
+
+footer {
+  text-align: center;
+  color: blueviolet;
+  font-family: monospace;
+}
+
+a {
+  text-decoration: none;
+  color: palevioletred;
+  transition: all 200ms ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+}
