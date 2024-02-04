@@ -1,27 +1,3 @@
-let now = new Date();
-let currentDayTime = document.querySelector(".current-day-time");
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-
-let hours = now.getHours();
-if (hours < 10) {
-  hours = "0" + hours;
-}
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = "0" + minutes;
-}
-currentDayTime.innerHTML = `${day} ${hours}:${minutes} `;
-
 function displayTemperature(response) {
   console.log(response.data);
   let currentTemperatureDisplay = document.querySelector("#today-temperature");
@@ -33,8 +9,11 @@ function displayTemperature(response) {
   let humidityDisplay = response.data.temperature.humidity;
   let wind = document.querySelector(".wind");
   let windDisplay = response.data.temperature.humidity;
+  let time = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
 
   h1.innerHTML = response.data.city;
+  time.innerHTML = date.getHours();
   currentTemperatureDisplay.innerHTML = temperature;
   description.innerHTML = descriptionDisplay;
   humidity.innerHTML = `${humidityDisplay}%`;
