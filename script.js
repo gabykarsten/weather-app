@@ -13,7 +13,8 @@ function displayTemperature(response) {
   let date = new Date(response.data.time * 1000);
 
   h1.innerHTML = response.data.city;
-  time.innerHTML = date.getHours();
+  time.innerHTML = `${date.getDay()} ${date.getHours()}:${date.getMinutes()}`;
+  console.log(time);
   currentTemperatureDisplay.innerHTML = temperature;
   description.innerHTML = descriptionDisplay;
   humidity.innerHTML = `${humidityDisplay}%`;
