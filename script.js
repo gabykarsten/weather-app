@@ -20,7 +20,7 @@ let minutes = now.getMinutes();
 if (minutes < 10) {
   minutes = "0" + minutes;
 }
-currentDayTime.innerHTML = `${day} ${hours}:${minutes}`;
+currentDayTime.innerHTML = `${day} ${hours}:${minutes} `;
 
 function displayTemperature(response) {
   console.log(response.data);
