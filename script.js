@@ -20,15 +20,24 @@ let minutes = now.getMinutes();
 if (minutes < 10) {
   minutes = "0" + minutes;
 }
-currentDayTime.innerHTML = `${day} ${hours}:${minutes}`;
+currentDayTime.innerHTML = `${day} ${hours}:${minutes}   `;
 
 function displayTemperature(response) {
   console.log(response.data);
   let currentTemperatureDisplay = document.querySelector("#today-temperature");
   let temperature = Math.round(response.data.temperature.current);
   let h1 = document.querySelector("h1");
+  let currentSituation = document.querySelector("#description");
+  let humidity = document.querySelector(".humidity");
+  let humidityDisplay = response.data.temperature.humidity;
+  let wind = document.querySelector(".wind");
+  let windDisplay = Math.round(response.data.wind.speed);
+
   h1.innerHTML = response.data.city;
   currentTemperatureDisplay.innerHTML = temperature;
+  currentSituation.innerHTML = response.data.condition.description;
+  humidity.innerHTML = `${humidityDisplay}%`;
+  wind.innerHTML = `${windDisplay}Km/h`;
 }
 
 function search(event) {
