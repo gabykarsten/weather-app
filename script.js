@@ -13,12 +13,29 @@ function displayTemperature(response) {
   let date = new Date(response.data.time * 1000);
 
   h1.innerHTML = response.data.city;
-  time.innerHTML = `${date.getDay()} ${date.getHours()}:${date.getMinutes()}`;
+  time.innerHTML = formatDate(date);
   console.log(time);
   currentTemperatureDisplay.innerHTML = temperature;
   description.innerHTML = descriptionDisplay;
   humidity.innerHTML = `${humidityDisplay}%`;
   wind.innerHTML = `${windDisplay}km/h`;
+}
+
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+
+  return `${day} ${hours}:${minutes}`;
 }
 
 function search(event) {
