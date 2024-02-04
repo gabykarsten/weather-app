@@ -27,8 +27,18 @@ function displayTemperature(response) {
   let currentTemperatureDisplay = document.querySelector("#today-temperature");
   let temperature = Math.round(response.data.temperature.current);
   let h1 = document.querySelector("h1");
+  let description = document.querySelector("#description");
+  let descriptionDisplay = response.data.condition.description;
+  let humidity = document.querySelector(".humidity");
+  let humidityDisplay = response.data.temperature.humidity;
+  let wind = document.querySelector(".wind");
+  let windDisplay = response.data.temperature.humidity;
+
   h1.innerHTML = response.data.city;
   currentTemperatureDisplay.innerHTML = temperature;
+  description.innerHTML = descriptionDisplay;
+  humidity.innerHTML = `${humidityDisplay}%`;
+  wind.innerHTML = `${windDisplay}km/h`;
 }
 
 function search(event) {
