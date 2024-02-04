@@ -14,7 +14,7 @@ function displayTemperature(response) {
 
   h1.innerHTML = response.data.city;
   time.innerHTML = formatDate(date);
-  console.log(time);
+
   currentTemperatureDisplay.innerHTML = temperature;
   description.innerHTML = descriptionDisplay;
   humidity.innerHTML = `${humidityDisplay}%`;
@@ -39,7 +39,7 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hours}:${minutes}`;
+  return `${day}, ${hours}:${minutes}`;
 }
 
 function search(event) {
