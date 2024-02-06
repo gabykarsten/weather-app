@@ -12,6 +12,10 @@ function displayTemperature(response) {
   let time = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
 
+  let iconDisplay = document.querySelector("#icon");
+
+  iconDisplay.innerHTML = `<img src="${response.data.condition.icon_url}" class="material-symbols-outlined">`;
+
   h1.innerHTML = response.data.city;
   time.innerHTML = formatDate(date);
 
