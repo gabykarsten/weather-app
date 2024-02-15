@@ -74,6 +74,39 @@ p {
   color: rgb(175, 101, 245);
 }
 
+.weather-forecast {
+  text-align: center;
+  margin: 20px 43px;
+}
+
+.weather-forecast-container {
+  display: inline-block;
+  justify-content: space-around;
+  margin: 20px 43px;
+}
+
+.weather-forecast-day {
+  font-size: 23px;
+  color: purple;
+  display: inline-block;
+  opacity: 0.6;
+}
+
+.weather-forecast-icon {
+  color: palevioletred;
+  font-size: 35px;
+}
+
+.weather-forecast-temperatures {
+  font-size: 18px;
+  color: rgb(175, 101, 245);
+  text-align: center;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.4;
+}
+
 footer {
   text-align: center;
   color: blueviolet;
