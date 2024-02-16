@@ -81,13 +81,14 @@ p {
 
 .weather-forecast {
   text-align: center;
-  margin: 20px 43px;
+  display: block;
+  margin: 0 auto;
 }
 
 .weather-forecast-container {
   display: inline-block;
   justify-content: space-around;
-  margin: 20px 43px;
+  margin: 20px 30px;
 }
 
 .weather-forecast-day {
@@ -99,17 +100,14 @@ p {
 
 .weather-forecast-icon {
   color: palevioletred;
-  font-size: 35px;
+  width: 100px;
+  text-align: center;
 }
 
 .weather-forecast-temperatures {
   font-size: 18px;
   color: rgb(175, 101, 245);
   text-align: center;
-}
-
-.weather-forecast-temperature-min {
-  opacity: 0.4;
 }
 
 footer {
