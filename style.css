@@ -55,6 +55,11 @@ h1 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
+.weather-description {
+  font-size: 20px;
+  color: palevioletred;
+}
+
 .material-symbols-outlined {
   color: palevioletred;
   font-size: 30px;
